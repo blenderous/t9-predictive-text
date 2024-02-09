@@ -23,6 +23,7 @@
 .T9Keyboard__output p {
   border: 2px solid #cacaca;
   min-height: 40px;
+  width: 280px;
   text-align: left;
   font-size: 1.2em;
   padding: 8px;

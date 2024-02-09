@@ -31,7 +31,7 @@ function App() {
 
   const onHashClick = () => {
     if (outputIndex < outputArray.length - 1) {
-      setOutputIndex(outputIndex => outputIndex + 1)
+      setOutputIndex((outputIndex) => outputIndex + 1)
     } else {
       setOutputIndex(0)
     }
@@ -111,9 +111,16 @@ function App() {
             </button>
           </div>
           <div className="T9Keyboard__input-row">
-            <button role="button">
+            <button
+              role="button"
+              onClick={() =>
+                setInput((input) => input.substring(0, input.length - 1))
+              }
+            >
               <span className="T9Keyboard__input-button-number">*</span>
-              <span className="T9Keyboard__input-button-alphabets"></span>
+              <span className="T9Keyboard__input-button-alphabets">
+                Delete
+              </span>
             </button>
             <button
               role="button"
